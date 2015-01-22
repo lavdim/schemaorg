@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RDFa Lite Reflection</title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Schema.org core schema</h1>
+
+    <p>This is the RDFa representation of the schema.org schema, the underlying representation of the schema.org vocabulary.</p>
+
+    <p>It is represented in a form based on W3C RDF/RDFS. We encourage proposals for schema.org improvements to be expressed
+      in this same style. For Discussion please use the W3C <a href="mailto:public-vocabs@w3.org">Web schemas</a> group.</p>
+    <p>
+    See <a href="http://schema.org/docs/datamodel.html">datamodel</a> for more details.
+    </p>
+    <p>
+      Note: the style of RDFa used here may change in the future. To see the substantive content of the schema, view the
+      HTML source markup. We use a simple subset of RDFa for syntax, including prefixes that are declared in the
+      <a href="http://www.w3.org/2011/rdfa-context/rdfa-1.1">RDFa initial context</a>.
+    </p>
+
+    <hr />
+
+    <div typeof="rdf:Property" resource="http://schema.org/Type1Plug">
+<span class="h" property="rdfs:label" lang="en">Type1 Plug</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/placeType">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Place type where charging point is located, e.g. airport, restaurant.</span>
+<span class="h" property="rdfs:label" lang="en">placeType</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Key">
+<span class="h" property="rdfs:label" lang="de">Schlüssel</span>
+<span class="h" property="rdfs:label" lang="en">Key</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/lockerAvailable">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Indicates whether plug has a locker. </span>
+<span class="h" property="rdfs:label" lang="en">Locker available</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/accessible">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Access information of the charging point.</span>
+<span class="h" property="rdfs:label" lang="en">has charger</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/AccessCode">
+<span class="h" property="rdfs:label" lang="en">Zugangskode</span>
+<span class="h" property="rdfs:label" lang="en">AccessCode</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Type2Plug">
+<span class="h" property="rdfs:label" lang="en">Type2 Plug</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Plug">
+<span class="h" property="rdfs:label" lang="de">Anschluss</span>
+<span class="h" property="rdfs:label" lang="en">Plug</span>
+<span property="rdfs:comment">Describes  plug characteristics.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/model">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Charger">Charger</a></span>
+<span property="rdfs:comment">Charger model of the charging point. </span>
+<span class="h" property="rdfs:label" lang="en">Model</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Mandatory">
+<span class="h" property="rdfs:label" lang="en">Mandatory</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Payment">
+<span class="h" property="rdfs:label" lang="de">Zahlung</span>
+<span class="h" property="rdfs:label" lang="en">Payment</span>
+<span property="rdfs:comment">Defines  payment method.</span>
+<span> Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/PaymentMethod">PaymentMethod</a></span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/ComboPlug">
+<span class="h" property="rdfs:label" lang="en">Combo Plug</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/energyType">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Charger">Charger</a></span>
+<span property="rdfs:comment">Energy type of the charging point. </span>
+<span class="h" property="rdfs:label" lang="en">energy type</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/picture">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Resource">Resource</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Picture of charging point.</span>
+<span class="h" property="rdfs:label" lang="en">picture</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/MobileApplication">
+<span class="h" property="rdfs:label" lang="en">MobileApplication</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/numberOfParkingPlaces">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Number of parking places. </span>
+<span class="h" property="rdfs:label" lang="en">number of parking places</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ChargingPointLocation">
+<span class="h" property="rdfs:label" lang="de">Lokalisierung der Ladestation</span>
+<span class="h" property="rdfs:label" lang="en">Charging Point Location</span>
+<span property="rdfs:comment">Describes the charging point location.</span>
+<span> Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Place">Place</a></span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/BadgeIsAvailable">
+<span class="h" property="rdfs:label" lang="en">BadgeIsAvailable</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Fast">
+<span class="h" property="rdfs:label" lang="en">Fast</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/threePhasedCurrentavailable">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Indicates whether Three-phased current is available.  </span>
+<span class="h" property="rdfs:label" lang="en">Three-phased current available</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ChargingSpeed">
+<span class="h" property="rdfs:label" lang="en">Charging Speed</span>
+<span property="rdfs:comment">Describes speed types available at the  types of vehicle the can be loaded by charging point.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/cableAvailable">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Indicates whether plug has a cable. </span>
+<span class="h" property="rdfs:label" lang="en">Cable available</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Type3Plug">
+<span class="h" property="rdfs:label" lang="en">Type3 Plug</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/BadgeHasToBeOrdered">
+<span class="h" property="rdfs:label" lang="en">BadgeHasToBeOrdered</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/identification">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/IdentificationSystem">IdentificationSystem</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Identification system to assess charging point. </span>
+<span class="h" property="rdfs:label" lang="en">identification</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/additionalInformation">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Other information about the charging point.</span>
+<span class="h" property="rdfs:label" lang="en">Additional Information</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/brand">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Charger">Charger</a></span>
+<span property="rdfs:comment">Defines the charger brand. </span>
+<span class="h" property="rdfs:label" lang="en">Brand</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/PhoneCall">
+<span class="h" property="rdfs:label" lang="en">PhoneCall</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Undefined">
+<span class="h" property="rdfs:label" lang="de">Undefiniert</span>
+<span class="h" property="rdfs:label" lang="de">Nicht bekannt</span>
+<span class="h" property="rdfs:label" lang="en">Undefined</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/payment">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Payment">Payment</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPointFees">ChargingPointFees</a></span>
+<span property="rdfs:comment">Available payment forms for recharging fees.</span>
+<span class="h" property="rdfs:label" lang="en">Payment forms</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/plugCondition">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Plug condition. </span>
+<span class="h" property="rdfs:label" lang="en">Plug Condition</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/BrandsCustomers">
+<span class="h" property="rdfs:label" lang="en">BrandsCustomers</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/IdentificationSystem">
+<span class="h" property="rdfs:label" lang="en">Identification System</span>
+<span property="rdfs:comment">Describes identification system of the charging point.</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/AccessType">
+<link property="rdfs:subPropertyOf" href="http://schema.org/Access" /><span class="h" property="rdfs:label" lang="en">Access Type</span>
+<span property="rdfs:comment">Describes access type of the charging point.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/chargingSpeed">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ChargingSpeed">ChargingSpeed</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Charging speed of plug. </span>
+<span class="h" property="rdfs:label" lang="en">Charging Speed</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Optional">
+<span class="h" property="rdfs:label" lang="en">Optional</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/isLocated">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ChargingPointLocation">ChargingPointLocation</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Location of the charging point.</span>
+<span class="h" property="rdfs:label" lang="en">isLocated</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/CustomerOfPremise">
+<span class="h" property="rdfs:label" lang="en">CustomerOfPremise</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/CreditCard">
+<span class="h" property="rdfs:label" lang="de">Kreditkarte</span>
+<span class="h" property="rdfs:label" lang="en">CreditCard</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/plugInformation">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Captures information about plug. </span>
+<span class="h" property="rdfs:label" lang="en">Plug Information</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/isOwnedBy">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ChargingPointOwner">ChargingPointOwner</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Charging point's owner.</span>
+<span class="h" property="rdfs:label" lang="en">isOwnedBy</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/EmployeesOnly">
+<span class="h" property="rdfs:label" lang="de">Nur Angestellte</span>
+<span class="h" property="rdfs:label" lang="en">EmployeesOnly</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ChargingPointFees">
+<span class="h" property="rdfs:label" lang="en">Charging Point Fees</span>
+<span property="rdfs:comment">Captures information about the charging point fees.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/status">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Current status of the charging point, e.g. out-of-order or functional.</span>
+<span class="h" property="rdfs:label" lang="en">status</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/coveredLocation">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Indicates whether the location of the charging point is covered.</span>
+<span class="h" property="rdfs:label" lang="en">Covered Location</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/TextMessage">
+<span class="h" property="rdfs:label" lang="en">TextMessage</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/CHAdeMOPlug">
+<span class="h" property="rdfs:label" lang="en">CHAdeMO</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ChargingPoint">
+<span class="h" property="rdfs:label" lang="pt">Ponto de Carregamento</span>
+<span class="h" property="rdfs:label" lang="nl">Oplaadpunt</span>
+<span class="h" property="rdfs:label" lang="es">Punto de Recarga</span>
+<span class="h" property="rdfs:label" lang="fr">Point de charge</span>
+<span class="h" property="rdfs:label" lang="en">Charging Point</span>
+<span class="h" property="rdfs:label" lang="de">Ladestation</span>
+<span property="rdfs:comment">Defines the public or semi-public charging points for electric vehicles available worldwide. </span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/description">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Description of charging point.</span>
+<span class="h" property="rdfs:label" lang="en">Description</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/power">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Plug power. </span>
+<span class="h" property="rdfs:label" lang="en">Power</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/EUDomesticPlug">
+<span class="h" property="rdfs:label" lang="en">EU Domestic Plug</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/PlugType">
+<span class="h" property="rdfs:label" lang="de">Steckertyp</span>
+<span class="h" property="rdfs:label" lang="en">Plug Type</span>
+<span property="rdfs:comment">Describes  type of available plug.</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Charger">
+<span class="h" property="rdfs:label" lang="de">Ladergerät</span>
+<span class="h" property="rdfs:label" lang="en">Charger</span>
+<span property="rdfs:comment">Describes characteristics of the charger.</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ChargingPointOwner">
+<span class="h" property="rdfs:label" lang="de">Besitzer der Ladestation</span>
+<span class="h" property="rdfs:label" lang="en">Charging Point Owner</span>
+<span property="rdfs:comment">Captures information about the owner of charging point.</span>
+<span> Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Agent">Agent</a></span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/BookingType">
+<span class="h" property="rdfs:label" lang="en">Booking Type</span>
+<span property="rdfs:comment">Describes booking type of the charging point.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/isPaidChargingPoint">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPointFees">ChargingPointFees</a></span>
+<span property="rdfs:comment">Indicated whether it is paid charging point.</span>
+<span class="h" property="rdfs:label" lang="en">Is paid charging point</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Standard">
+<span class="h" property="rdfs:label" lang="en">Standard</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/access">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/AccessType">AccessType</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Access types of charging point. </span>
+<span class="h" property="rdfs:label" lang="en">access</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/IdentifiedPerson">
+<span class="h" property="rdfs:label" lang="de">Autorisierte Person</span>
+<span class="h" property="rdfs:label" lang="en">IdentifiedPerson</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/AccessInformation">
+<span class="h" property="rdfs:label" lang="de">Zugagsinformation</span>
+<span class="h" property="rdfs:label" lang="en">Access Information</span>
+<span property="rdfs:comment">Access information of the charging point.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Acelerated">
+<span class="h" property="rdfs:label" lang="en">Acelerated</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/None">
+<span class="h" property="rdfs:label" lang="en">Keine</span>
+<span class="h" property="rdfs:label" lang="en">None</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Undefined">
+<span class="h" property="rdfs:label" lang="de">Undefiniert</span>
+<span class="h" property="rdfs:label" lang="de">Nicht bekannt</span>
+<span class="h" property="rdfs:label" lang="en">Undefined</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/voltage">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Plug voltage.  </span>
+<span class="h" property="rdfs:label" lang="en">Voltage</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/booking">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/BookingType">BookingType</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Booking types for charging point. </span>
+<span class="h" property="rdfs:label" lang="en">Booking</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/InhabitantsOnly">
+<span class="h" property="rdfs:label" lang="de">Nur Einwohner</span>
+<span class="h" property="rdfs:label" lang="en">InhabitantsOnly</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/availableFromTime">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Intormation when the charging point will be available. </span>
+<span class="h" property="rdfs:label" lang="en">availableFromTime</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/SchukoPlug">
+<span class="h" property="rdfs:label" lang="en">Schuko Plug</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/vehicleType">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/VehicleType">VehicleType</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Vehicle type. </span>
+<span class="h" property="rdfs:label" lang="en">vehicle type</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/currentType">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Current type.  </span>
+<span class="h" property="rdfs:label" lang="en">CurrentType</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/hasPlug">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Plugs available at the charging point.</span>
+<span class="h" property="rdfs:label" lang="en">has plugs</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/UnknownPlug">
+<span class="h" property="rdfs:label" lang="de">Unbekannter Anschluss</span>
+<span class="h" property="rdfs:label" lang="en">Unknown Plug</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/hasCharger">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Charger">Charger</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Charging point charger.</span>
+<span class="h" property="rdfs:label" lang="en">has charger</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/placeName">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPoint">ChargingPoint</a></span>
+<span property="rdfs:comment">Place name where charging point is located.</span>
+<span class="h" property="rdfs:label" lang="en">placeName</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/accessTimes">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/AccessInformation">AccessInformation</a></span>
+<span property="rdfs:comment">Defines access time of the charging point. </span>
+<span class="h" property="rdfs:label" lang="en">Access Time</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/Impossible">
+<span class="h" property="rdfs:label" lang="en">Impossible</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/VehicleType">
+<span class="h" property="rdfs:label" lang="de">Fahrzeugstyp</span>
+<span class="h" property="rdfs:label" lang="en">Vehicle Type</span>
+<span property="rdfs:comment">Describes  types of vehicle tht can be loaded by charging point.</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/intensity">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Plug">Plug</a></span>
+<span property="rdfs:comment">Plug intensity.  </span>
+<span class="h" property="rdfs:label" lang="en">Intensity</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/feesDescription">
+<span> Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Literal">Literal</a></span>
+<span> Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ChargingPointFees">ChargingPointFees</a></span>
+<span property="rdfs:comment">Defines recharging fees.</span>
+<span class="h" property="rdfs:label" lang="en">Fees description</span>
+</div>
+
+
+
+</body>
+</html>
+
